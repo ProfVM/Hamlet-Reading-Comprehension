@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hamlet Prince of Denmark</title>
+
+    <meta http-equiv="Content-Type" content="text/html; CHARSET=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Author" content="Made with QuizFaber 4.1.9">
+    <meta name="generator" content="QuizFaber 4.1.9">
+    <meta name="keywords" content="quiz">
+    <meta name="description" content="Hamlet Reading Comprehension">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="../scripts/error.js"></script>
+    <script src="../scripts/definitions.js"></script>
+    <script src="../scripts/security.js"></script>
+    <script src="../scripts/cookie.js"></script>
+    <script src="../scripts/storage.js"></script>
+    <script src="../scripts/time.js"></script>
+    <script src="../scripts/valuation.js"></script>
+    <script src="../scripts/navigation.js"></script>
+    <script src="../scripts/utility.js"></script>
+    <script src="../scripts/engine.js"></script>
+    <script src="../scripts/recovery.js"></script>
+    <script src="../scripts/view.js"></script>
+    <script src="../scripts/matching.js"></script>
+    <script src="../scripts/lightbox.js"></script>
+    <script src="../scripts/bootoast.min.js"></script>
+
+    <script src="../scripts/page.js"></script>
+    
+
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="../styles/lightbox.css">
+    <link rel="stylesheet" href="../styles/bootoast.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+</head>
+<body>
+
+    <div class="header qf-statusbar-class" id="idTopBar">
+        <div class="row">
+            <div class="col-sm-3 col-xs-12 text-left text-xs-center"><span class="label_topbar_clock" id="idClock"></span></div>
+            <div class="col-sm-2 col-xs-3 text-center text-xs-left" id="idDivCorrectAnswer"><span class="label_topbar nowrap">correct</span> <span id="idCorrectAnswers" class="badge"></span> </div>
+            <div class="col-sm-2 col-xs-3 text-center text-xs-left" id="idDivWrongAnswer"><span class="label_topbar nowrap">wrong</span> <span id="idWrongAnswers" class="badge"></span> </div>
+            <div class="col-sm-2 col-xs-3 text-center text-xs-left" id="idDivToBeAnswered"><span class="label_topbar nowrap">to be answered</span> <span id="idToBeAnswered" class="badge"></span> </div>
+            <div class="col-sm-3 col-xs-3 text-right">
+                <button id="idBtnPrintQuiz" type="button" class="btn btn-primary btn_topbar" onclick="onPrintQuizButtonClick()" style="display:none">PRINT</button>
+                <button id="idBtnGoToResults" type="button" class="btn btn-primary btn_topbar" onclick="onQuizResultsButtonClick()" style="display:none">Quiz Result</button>
+                <button id="idBtnRetire" type="button" class="btn btn-warning btn_topbar" onclick="onAbandonButtonClick()" style="display:none">Retire</button>
+                <button id="idBtnSavePartial" type="button" class="btn btn-primary btn_topbar" onclick="onSavePartialButtonClick()" style="display:none" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Salvataggio...">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="qst_menu"></div>
+
+    <div class="container">
+
+        <div class="jumbotron qf-jumbotron-class" id="idQuizHeader">
+
+            <div class="row">
+                <div class="col-md-3" id="idQuizHeaderLogo">
+                    <div id="idQuizHeaderLogoImg"></div>
+                </div>
+                <div class="col-md-9" id="idQuizHeaderText">
+                    <h1 id="idQuizTitle"></h1>
+                    <p class="lead">
+                        <span id="idQuizDescription"></span>
+                    <p id="idQuizProfile" style="display:none">
+                        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#idQuizProfileInfo">More info</button>
+                        <div id="idQuizProfileInfo" class="collapse">
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>Author</strong><span class="pull-right" id="idAuthor"></span></li>
+                                <li class="list-group-item"><strong>Argument</strong><span class="pull-right" id="idArgument"></span></li>
+                                <li class="list-group-item"><strong>Company</strong><span class="pull-right" id="idCompany"></span></li>
+                                <li class="list-group-item"><strong>Date</strong><span class="pull-right" id="idDate"></span></li>
+                            </ul>
+                        </div>
+                    </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="divErrorGlobal" class="alert alert-danger alert-dismissible fade in" style="display:none">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Error</strong> <span id="idErrorMsgGlobal"></span>
+        </div>
+        <div id="divWarningGlobal" class="alert alert-warning alert-dismissible fade in" style="display:none">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Watch out!</strong> <span id="idWarningMsgGlobal" />
+        </div>
+
+        <div id="allPanelsId" class="qf-panel-all-questions-class">
+
+            <div class="panel panel-default" id="idQuizResultsPanelTop" style="display:none">
+                <div class="panel-body">
+                    <button type="button" class="btn btn-primary center-block" id="btnGotoResults" onclick="onQuizResultsButtonClick()">Quiz Result</button>
+                </div>
+            </div>
+
+            <div class="panel panel-default" id="idVerifyPanelTop" style="display:none">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-10" style="padding-top:8px;">
+                            Al termine del quiz premi il pulsante 'VERIFICA' qui' a fianco
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-primary pull-right" id="btnVerify" onclick="PrintAskVerifyQuest()">Verifica</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="well" id="idSectionTextIntro" style="display:none"></div>
+
+            <div class="panel panel-primary qf-panel-question-class" id="idPanel1" ><div class="panel-heading qf-panel-question-heading-class" ><a name="linkQst1" class="anchor" ></a><b>question 1</b></div><div class="panel-body qf-panel-question-body-class" ><div id="divSuccess0" class="alert alert-success alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Correct answer</div>
+<div id="divFail0" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Wrong answer</div>
+<div id="divPartiallyCorrect0" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Partially correct answer</div>
+<div id="divInfo0" class="alert alert-info alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Answer completed</div>
+<div id="divWarning0" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Watch out!</strong> <span id="idWarningMsg0" ></span></div>
+<div id="divError0" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Error</strong> <span id="idErrorMsg0" ></span></div>
+<p class="class_before_after_qst_format" ><span><B><SPAN style="font-size:12;">Hamlet</B>, <I>Prince of Denmark, is arguably the most famous tragedy in the English language. It is set in the somber royal court of Elsinore, where the ghost of the recently deceased King Hamlet appears to his son, the protagonist. The Ghost reveals that he was brutally murdered in his sleep by his own brother, Claudius, who then quickly seized the throne and married the late king's wife, Queen Gertrude. This act is the core catalyst for the play's action, charging Hamlet with the duty of revenge.Faced with this monumental, supernatural command, Hamlet struggles with profound existential and moral dilemmas. His famous soliloquy, "To be, or not to be, that is the question," encapsulates his contemplation of suicide as a release from the suffering ("the slings and arrows of outrageous fortune") and his fear of the unknown that lies beyond death. To buy time and ascertain Claudius's guilt without revealing his hand, Hamlet adopts an "antic disposition" (feigned madness). This behavior isolates him, particularly from Ophelia, the woman he loves, who becomes deeply distressed by his erratic cruelty.Hamlet orchestrates a dramatic performance, "The Mousetrap" (a play-within-a-play), which mimics the precise manner of the old king's murder. Claudius's immediate, guilt-ridden exit from the audience confirms his culpability for Hamlet. This confirmation leads to a disastrous confrontation between Hamlet and his mother, Gertrude, during which Hamlet accidentally kills the listening courtier, Polonius, mistaking him for Claudius behind the tapestry.The final act is a cascade of tragic consequences: Ophelia, driven mad by grief and loss, drowns. Her brother, Laertes, returns seeking revenge for both his father's and sister's deaths. Claudius, ever the schemer, plots with Laertes to ensure Hamlet's demise in a duel. Laertes uses a poisoned rapier, and Claudius prepares a poisoned drink. In the chaotic final scene, Gertrude mistakenly drinks the poison, Laertes wounds Hamlet with the poisoned blade, Hamlet successfully wounds Laertes, and then, using the same poisoned sword, finally kills Claudius. As he lies dying, Hamlet passes the mantle of leadership to Fortinbras, the Prince of Norway, who arrives to survey the carnage and bring order to the corrupted state of Denmark. The play is a powerful examination of the paralyzing nature of thought in the face of action, the decay of political and familial bonds, and the pervasive nature of death.</I></SPAN></span></p>
+<p><span class="class_qst_format text_full_width"><b>Make your choice.</b></span></p><form class="class_bool_choices" ><ol><li><p><span class="quiz_answer_class">The play takes place in the city of Venice. </span></p><div class="row" ><div class="col-sm-12 col-md-12 col-lg-12" ><input type="radio" class="qf-truefalse-radio-class" id="idRadio0_0_T" name="optradio0_0" value="1" /><span class="true_false_class" >TRUE</span><input type="radio" id="idRadio0_0_F" name="optradio0_0" value="0" /><span class="true_false_class" >FALSE</span></div></div><br/></li><li><p><span class="quiz_answer_class">The Ghost of King Hamlet tells his son that he died of a snakebite. </span></p><div class="row" ><div class="col-sm-12 col-md-12 col-lg-12" ><input type="radio" class="qf-truefalse-radio-class" id="idRadio0_1_T" name="optradio0_1" value="1" /><span class="true_false_class" >TRUE</span><input type="radio" id="idRadio0_1_F" name="optradio0_1" value="0" /><span class="true_false_class" >FALSE</span></div></div><br/></li><li><p><span class="quiz_answer_class">Claudius is King Hamlet's brother.</span></p><div class="row" ><div class="col-sm-12 col-md-12 col-lg-12" ><input type="radio" class="qf-truefalse-radio-class" id="idRadio0_2_T" name="optradio0_2" value="1" /><span class="true_false_class" >TRUE</span><input type="radio" id="idRadio0_2_F" name="optradio0_2" value="0" /><span class="true_false_class" >FALSE</span></div></div><br/></li><li><p><span class="quiz_answer_class">Hamlet's famous "To be, or not to be" soliloquy is about his desire for military success. </span></p><div class="row" ><div class="col-sm-12 col-md-12 col-lg-12" ><input type="radio" class="qf-truefalse-radio-class" id="idRadio0_3_T" name="optradio0_3" value="1" /><span class="true_false_class" >TRUE</span><input type="radio" id="idRadio0_3_F" name="optradio0_3" value="0" /><span class="true_false_class" >FALSE</span></div></div><br/></li><li><p><span class="quiz_answer_class">Hamlet pretends to be mad (adopts an "antic disposition") to observe his uncle's actions.</span></p><div class="row" ><div class="col-sm-12 col-md-12 col-lg-12" ><input type="radio" class="qf-truefalse-radio-class" id="idRadio0_4_T" name="optradio0_4" value="1" /><span class="true_false_class" >TRUE</span><input type="radio" id="idRadio0_4_F" name="optradio0_4" value="0" /><span class="true_false_class" >FALSE</span></div></div><br/></li><li><p><span class="quiz_answer_class">"The Mousetrap" is the name of the duel between Hamlet and Laertes. </span></p><div class="row" ><div class="col-sm-12 col-md-12 col-lg-12" ><input type="radio" class="qf-truefalse-radio-class" id="idRadio0_5_T" name="optradio0_5" value="1" /><span class="true_false_class" >TRUE</span><input type="radio" id="idRadio0_5_F" name="optradio0_5" value="0" /><span class="true_false_class" >FALSE</span></div></div><br/></li><li><p><span class="quiz_answer_class">Claudius's reaction to the play-within-a-play confirms his guilt to Hamlet. </span></p><div class="row" ><div class="col-sm-12 col-md-12 col-lg-12" ><input type="radio" class="qf-truefalse-radio-class" id="idRadio0_6_T" name="optradio0_6" value="1" /><span class="true_false_class" >TRUE</span><input type="radio" id="idRadio0_6_F" name="optradio0_6" value="0" /><span class="true_false_class" >FALSE</span></div></div><br/></li><li><p><span class="quiz_answer_class">Polonius is accidentally killed by Hamlet while hiding behind a tapestry.</span></p><div class="row" ><div class="col-sm-12 col-md-12 col-lg-12" ><input type="radio" class="qf-truefalse-radio-class" id="idRadio0_7_T" name="optradio0_7" value="1" /><span class="true_false_class" >TRUE</span><input type="radio" id="idRadio0_7_F" name="optradio0_7" value="0" /><span class="true_false_class" >FALSE</span></div></div><br/></li><li><p><span class="quiz_answer_class">Ophelia's brother, Laertes, seeks revenge for the deaths of his father and sister. </span></p><div class="row" ><div class="col-sm-12 col-md-12 col-lg-12" ><input type="radio" class="qf-truefalse-radio-class" id="idRadio0_8_T" name="optradio0_8" value="1" /><span class="true_false_class" >TRUE</span><input type="radio" id="idRadio0_8_F" name="optradio0_8" value="0" /><span class="true_false_class" >FALSE</span></div></div><br/></li><li><p><span class="quiz_answer_class">At the end of the play, the kingdom of Denmark is inherited by a foreign ruler named Fortinbras. </span></p><div class="row" ><div class="col-sm-12 col-md-12 col-lg-12" ><input type="radio" class="qf-truefalse-radio-class" id="idRadio0_9_T" name="optradio0_9" value="1" /><span class="true_false_class" >TRUE</span><input type="radio" id="idRadio0_9_F" name="optradio0_9" value="0" /><span class="true_false_class" >FALSE</span></div></div><br/></li></ol></form>
+</div></div>
+<div class="panel panel-primary qf-panel-question-class" id="idPanel2" ><div class="panel-heading qf-panel-question-heading-class" ><a name="linkQst2" class="anchor" ></a><b>question 2</b></div><div class="panel-body qf-panel-question-body-class" ><div id="divSuccess1" class="alert alert-success alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Correct answer</div>
+<div id="divFail1" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Wrong answer</div>
+<div id="divPartiallyCorrect1" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Partially correct answer</div>
+<div id="divInfo1" class="alert alert-info alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Answer completed</div>
+<div id="divWarning1" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Watch out!</strong> <span id="idWarningMsg1" ></span></div>
+<div id="divError1" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Error</strong> <span id="idErrorMsg1" ></span></div>
+<p><span class="class_qst_format text_full_width">What is the setting of the play described in the passage? </span></p><form><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio1_0" type="radio" name="optradio1" value="1" class="radio_answer" /><span class="class_ans_format text_full_width">The city of London </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio1_1" type="radio" name="optradio1" value="2" class="radio_answer" /><span class="class_ans_format text_full_width">The royal court of Elsinore </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio1_2" type="radio" name="optradio1" value="3" class="radio_answer" /><span class="class_ans_format text_full_width">The Wittenberg University</span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio1_3" type="radio" name="optradio1" value="4" class="radio_answer" /><span class="class_ans_format text_full_width">The kingdom of Norway </span></label><br/></div></form>
+</div></div>
+<div class="panel panel-primary qf-panel-question-class" id="idPanel3" ><div class="panel-heading qf-panel-question-heading-class" ><a name="linkQst3" class="anchor" ></a><b>question 3</b></div><div class="panel-body qf-panel-question-body-class" ><div id="divSuccess2" class="alert alert-success alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Correct answer</div>
+<div id="divFail2" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Wrong answer</div>
+<div id="divPartiallyCorrect2" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Partially correct answer</div>
+<div id="divInfo2" class="alert alert-info alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Answer completed</div>
+<div id="divWarning2" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Watch out!</strong> <span id="idWarningMsg2" ></span></div>
+<div id="divError2" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Error</strong> <span id="idErrorMsg2" ></span></div>
+<p><span class="class_qst_format text_full_width">The Ghost charges Hamlet with the duty of: </span></p><form><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio2_0" type="radio" name="optradio2" value="1" class="radio_answer" /><span class="class_ans_format text_full_width">Forgiving Claudius and Gertrude </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio2_1" type="radio" name="optradio2" value="2" class="radio_answer" /><span class="class_ans_format text_full_width">Defending Denmark from Fortinbras </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio2_2" type="radio" name="optradio2" value="3" class="radio_answer" /><span class="class_ans_format text_full_width">Marrying Ophelia immediately</span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio2_3" type="radio" name="optradio2" value="4" class="radio_answer" /><span class="class_ans_format text_full_width">Avenging his father's murder </span></label><br/></div></form>
+</div></div>
+<div class="panel panel-primary qf-panel-question-class" id="idPanel4" ><div class="panel-heading qf-panel-question-heading-class" ><a name="linkQst4" class="anchor" ></a><b>question 4</b></div><div class="panel-body qf-panel-question-body-class" ><div id="divSuccess3" class="alert alert-success alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Correct answer</div>
+<div id="divFail3" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Wrong answer</div>
+<div id="divPartiallyCorrect3" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Partially correct answer</div>
+<div id="divInfo3" class="alert alert-info alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Answer completed</div>
+<div id="divWarning3" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Watch out!</strong> <span id="idWarningMsg3" ></span></div>
+<div id="divError3" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Error</strong> <span id="idErrorMsg3" ></span></div>
+<p><span class="class_qst_format text_full_width">Which phrase best summarizes the core dilemma explored in the "To be, or not to be" soliloquy? </span></p><form><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio3_0" type="radio" name="optradio3" value="1" class="radio_answer" /><span class="class_ans_format text_full_width">The cost of war vs. the benefit of peace </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio3_1" type="radio" name="optradio3" value="2" class="radio_answer" /><span class="class_ans_format text_full_width">The struggle between thought and action </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio3_2" type="radio" name="optradio3" value="3" class="radio_answer" /><span class="class_ans_format text_full_width">The comparison between life's suffering and the uncertainty of death</span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio3_3" type="radio" name="optradio3" value="4" class="radio_answer" /><span class="class_ans_format text_full_width">The fear of Claudius's power </span></label><br/></div></form>
+</div></div>
+<div class="panel panel-primary qf-panel-question-class" id="idPanel5" ><div class="panel-heading qf-panel-question-heading-class" ><a name="linkQst5" class="anchor" ></a><b>question 5</b></div><div class="panel-body qf-panel-question-body-class" ><div id="divSuccess4" class="alert alert-success alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Correct answer</div>
+<div id="divFail4" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Wrong answer</div>
+<div id="divPartiallyCorrect4" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Partially correct answer</div>
+<div id="divInfo4" class="alert alert-info alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Answer completed</div>
+<div id="divWarning4" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Watch out!</strong> <span id="idWarningMsg4" ></span></div>
+<div id="divError4" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Error</strong> <span id="idErrorMsg4" ></span></div>
+<p><span class="class_qst_format text_full_width">What is the central reason Hamlet adopts an "antic disposition"? </span></p><form><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio4_0" type="radio" name="optradio4" value="1" class="radio_answer" /><span class="class_ans_format text_full_width">He genuinely goes insane from grief. </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio4_1" type="radio" name="optradio4" value="2" class="radio_answer" /><span class="class_ans_format text_full_width">To mask his intentions and observe Claudius. </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio4_2" type="radio" name="optradio4" value="3" class="radio_answer" /><span class="class_ans_format text_full_width">To prove he is unfit to be king.</span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio4_3" type="radio" name="optradio4" value="4" class="radio_answer" /><span class="class_ans_format text_full_width">To distract Ophelia from his revenge plan. </span></label><br/></div></form>
+</div></div>
+<div class="panel panel-primary qf-panel-question-class" id="idPanel6" ><div class="panel-heading qf-panel-question-heading-class" ><a name="linkQst6" class="anchor" ></a><b>question 6</b></div><div class="panel-body qf-panel-question-body-class" ><div id="divSuccess5" class="alert alert-success alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Correct answer</div>
+<div id="divFail5" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Wrong answer</div>
+<div id="divPartiallyCorrect5" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Partially correct answer</div>
+<div id="divInfo5" class="alert alert-info alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Answer completed</div>
+<div id="divWarning5" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Watch out!</strong> <span id="idWarningMsg5" ></span></div>
+<div id="divError5" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Error</strong> <span id="idErrorMsg5" ></span></div>
+<p><span class="class_qst_format text_full_width">What is the play-within-a-play known as? </span></p><form><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio5_0" type="radio" name="optradio5" value="1" class="radio_answer" /><span class="class_ans_format text_full_width">The Regicide's Tale </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio5_1" type="radio" name="optradio5" value="2" class="radio_answer" /><span class="class_ans_format text_full_width">The Tragedy of Gonzago </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio5_2" type="radio" name="optradio5" value="3" class="radio_answer" /><span class="class_ans_format text_full_width">The Revenge of the Prince</span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio5_3" type="radio" name="optradio5" value="4" class="radio_answer" /><span class="class_ans_format text_full_width">The Mousetrap </span></label><br/></div></form>
+</div></div>
+<div class="panel panel-primary qf-panel-question-class" id="idPanel7" ><div class="panel-heading qf-panel-question-heading-class" ><a name="linkQst7" class="anchor" ></a><b>question 7</b></div><div class="panel-body qf-panel-question-body-class" ><div id="divSuccess6" class="alert alert-success alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Correct answer</div>
+<div id="divFail6" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Wrong answer</div>
+<div id="divPartiallyCorrect6" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Partially correct answer</div>
+<div id="divInfo6" class="alert alert-info alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Answer completed</div>
+<div id="divWarning6" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Watch out!</strong> <span id="idWarningMsg6" ></span></div>
+<div id="divError6" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Error</strong> <span id="idErrorMsg6" ></span></div>
+<p><span class="class_qst_format text_full_width">Who does Hamlet accidentally kill during a confrontation with his mother? </span></p><form><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio6_0" type="radio" name="optradio6" value="1" class="radio_answer" /><span class="class_ans_format text_full_width">Claudius </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio6_1" type="radio" name="optradio6" value="2" class="radio_answer" /><span class="class_ans_format text_full_width">Laertes </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio6_2" type="radio" name="optradio6" value="3" class="radio_answer" /><span class="class_ans_format text_full_width">Fortinbras</span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio6_3" type="radio" name="optradio6" value="4" class="radio_answer" /><span class="class_ans_format text_full_width">Polonius </span></label><br/></div></form>
+</div></div>
+<div class="panel panel-primary qf-panel-question-class" id="idPanel8" ><div class="panel-heading qf-panel-question-heading-class" ><a name="linkQst8" class="anchor" ></a><b>question 8</b></div><div class="panel-body qf-panel-question-body-class" ><div id="divSuccess7" class="alert alert-success alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Correct answer</div>
+<div id="divFail7" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Wrong answer</div>
+<div id="divPartiallyCorrect7" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Partially correct answer</div>
+<div id="divInfo7" class="alert alert-info alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Answer completed</div>
+<div id="divWarning7" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Watch out!</strong> <span id="idWarningMsg7" ></span></div>
+<div id="divError7" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Error</strong> <span id="idErrorMsg7" ></span></div>
+<p><span class="class_qst_format text_full_width">What ultimately causes Ophelia to go mad and drown?</span></p><form><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio7_0" type="radio" name="optradio7" value="1" class="radio_answer" /><span class="class_ans_format text_full_width">Grief over the loss of her father and her love </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio7_1" type="radio" name="optradio7" value="2" class="radio_answer" /><span class="class_ans_format text_full_width">The failure of her relationship with Hamlet </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio7_2" type="radio" name="optradio7" value="3" class="radio_answer" /><span class="class_ans_format text_full_width">A curse placed upon her family</span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio7_3" type="radio" name="optradio7" value="4" class="radio_answer" /><span class="class_ans_format text_full_width">Fear of Claudius and Gertrude </span></label><br/></div></form>
+</div></div>
+<div class="panel panel-primary qf-panel-question-class" id="idPanel9" ><div class="panel-heading qf-panel-question-heading-class" ><a name="linkQst9" class="anchor" ></a><b>question 9</b></div><div class="panel-body qf-panel-question-body-class" ><div id="divSuccess8" class="alert alert-success alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Correct answer</div>
+<div id="divFail8" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Wrong answer</div>
+<div id="divPartiallyCorrect8" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Partially correct answer</div>
+<div id="divInfo8" class="alert alert-info alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Answer completed</div>
+<div id="divWarning8" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Watch out!</strong> <span id="idWarningMsg8" ></span></div>
+<div id="divError8" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Error</strong> <span id="idErrorMsg8" ></span></div>
+<p><span class="class_qst_format text_full_width">What two methods does Claudius plan to use to ensure Hamlet's death in the final duel? </span></p><form><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio8_0" type="radio" name="optradio8" value="1" class="radio_answer" /><span class="class_ans_format text_full_width">A firing squad and a sudden stabbing </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio8_1" type="radio" name="optradio8" value="2" class="radio_answer" /><span class="class_ans_format text_full_width">A poisoned sword and a poisoned drink </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio8_2" type="radio" name="optradio8" value="3" class="radio_answer" /><span class="class_ans_format text_full_width">Banishment and starvation</span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio8_3" type="radio" name="optradio8" value="4" class="radio_answer" /><span class="class_ans_format text_full_width">An ambush and a falling chandelier </span></label><br/></div></form>
+</div></div>
+<div class="panel panel-primary qf-panel-question-class" id="idPanel10" ><div class="panel-heading qf-panel-question-heading-class" ><a name="linkQst10" class="anchor" ></a><b>question 10</b></div><div class="panel-body qf-panel-question-body-class" ><div id="divSuccess9" class="alert alert-success alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Correct answer</div>
+<div id="divFail9" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Wrong answer</div>
+<div id="divPartiallyCorrect9" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Partially correct answer</div>
+<div id="divInfo9" class="alert alert-info alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Answer completed</div>
+<div id="divWarning9" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Watch out!</strong> <span id="idWarningMsg9" ></span></div>
+<div id="divError9" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Error</strong> <span id="idErrorMsg9" ></span></div>
+<p><span class="class_qst_format text_full_width">Who mistakenly drinks the poisoned cup in the final scene? </span></p><form><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio9_0" type="radio" name="optradio9" value="1" class="radio_answer" /><span class="class_ans_format text_full_width">Hamlet </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio9_1" type="radio" name="optradio9" value="2" class="radio_answer" /><span class="class_ans_format text_full_width">Claudius </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio9_2" type="radio" name="optradio9" value="3" class="radio_answer" /><span class="class_ans_format text_full_width">Laertes</span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio9_3" type="radio" name="optradio9" value="4" class="radio_answer" /><span class="class_ans_format text_full_width">Gertrude </span></label><br/></div></form>
+</div></div>
+<div class="panel panel-primary qf-panel-question-class" id="idPanel11" ><div class="panel-heading qf-panel-question-heading-class" ><a name="linkQst11" class="anchor" ></a><b>question 11</b></div><div class="panel-body qf-panel-question-body-class" ><div id="divSuccess10" class="alert alert-success alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Correct answer</div>
+<div id="divFail10" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Wrong answer</div>
+<div id="divPartiallyCorrect10" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Partially correct answer</div>
+<div id="divInfo10" class="alert alert-info alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Answer completed</div>
+<div id="divWarning10" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Watch out!</strong> <span id="idWarningMsg10" ></span></div>
+<div id="divError10" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Error</strong> <span id="idErrorMsg10" ></span></div>
+<p><span class="class_qst_format text_full_width">The passage states that the play is a powerful examination of the: </span></p><form><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio10_0" type="radio" name="optradio10" value="1" class="radio_answer" /><span class="class_ans_format text_full_width">Importance of honoring the dead </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio10_1" type="radio" name="optradio10" value="2" class="radio_answer" /><span class="class_ans_format text_full_width">Value of quick and decisive action </span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio10_2" type="radio" name="optradio10" value="3" class="radio_answer" /><span class="class_ans_format text_full_width">Ease of moral choice</span></label><br/></div><div class="radio" ><label style="display:inline-block;width:100%;margin-left:7px;" ><input id="idRadio10_3" type="radio" name="optradio10" value="4" class="radio_answer" /><span class="class_ans_format text_full_width">Paralyzing nature of thought in the face of action </span></label><br/></div></form>
+</div></div>
+<div class="panel panel-primary qf-panel-question-class" id="idPanel12" ><div class="panel-heading qf-panel-question-heading-class" ><a name="linkQst12" class="anchor" ></a><b>question 12</b></div><div class="panel-body qf-panel-question-body-class" ><div id="divSuccess11" class="alert alert-success alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Correct answer</div>
+<div id="divFail11" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Wrong answer</div>
+<div id="divPartiallyCorrect11" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Partially correct answer</div>
+<div id="divInfo11" class="alert alert-info alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Answer completed</div>
+<div id="divWarning11" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Watch out!</strong> <span id="idWarningMsg11" ></span></div>
+<div id="divError11" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Error</strong> <span id="idErrorMsg11" ></span></div>
+<p><span class="class_qst_format text_full_width"><b>Identify and explain the causal chain of events leading from Claudius's initial crime to the death of Polonius.</b> <i>Your answer should mention the initial crime, the Ghost's command, Hamlet's resulting behavior, and the immediate action that leads to Polonius's death.</i> (100/120 words)</span></p><form><div class="form-group" ><label for="comment11" style="float:right" ><span id="counter11" class="openAnsCounter" ></span><span class="openAnsLabelCounter" >Remaining chars</span></label><textarea class="form-control class_openans_text_format qf-openans-class" rows="5" maxlength="140" id="comment11" ></textarea></div></form>
+</div></div>
+<div class="panel panel-primary qf-panel-question-class" id="idPanel13" ><div class="panel-heading qf-panel-question-heading-class" ><a name="linkQst13" class="anchor" ></a><b>question 13</b></div><div class="panel-body qf-panel-question-body-class" ><div id="divSuccess12" class="alert alert-success alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Correct answer</div>
+<div id="divFail12" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Wrong answer</div>
+<div id="divPartiallyCorrect12" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Partially correct answer</div>
+<div id="divInfo12" class="alert alert-info alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> Answer completed</div>
+<div id="divWarning12" class="alert alert-warning alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Watch out!</strong> <span id="idWarningMsg12" ></span></div>
+<div id="divError12" class="alert alert-danger alert-dismissible fade in" style="display:none" ><a class="close" data-dismiss="alert" aria-label="close" >&times;</a> <strong>Error</strong> <span id="idErrorMsg12" ></span></div>
+<p><span class="class_qst_format text_full_width"><b>Discuss the symbolic role of Fortinbras in the context of the play's ending. What does his inheritance of the kingdom suggest about the themes of order and corruption explored throughout the tragedy? </b><i>Your answer should mention who Fortinbras is, why he arrives, and what the transfer of leadership signifies.</i> (100/120 words)</span></p><form><div class="form-group" ><label for="comment12" style="float:right" ><span id="counter12" class="openAnsCounter" ></span><span class="openAnsLabelCounter" >Remaining chars</span></label><textarea class="form-control class_openans_text_format qf-openans-class" rows="5" maxlength="140" id="comment12" ></textarea></div></form>
+</div></div>
+
+
+            <div class="well" id="idSectionTextEpilogue" style="display:none"></div>
+
+
+            <div class="panel panel-default" id="idQuizResultsPanelBottom" style="display:none">
+                <div class="panel-body">
+                    <button type="button" class="btn btn-primary center-block" onclick="onQuizResultsButtonClick()">Quiz Result</button>
+                </div>
+            </div>
+
+            <div class="panel panel-default" id="idVerifyPanelBottom" style="display:none">
+                <div class="panel-body">
+                    <span>Al termine del quiz premi il pulsante 'VERIFICA' qui' a fianco</span>
+                    <button type="button" class="btn btn-primary pull-right" onclick="PrintAskVerifyQuest()">Verifica</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Modal notification -->
+    <div id="idModalNotification" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Information</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="idModalNotificationText"></p>
+                </div>
+                <div class="modal-footer">
+                    <button id="idModalNotificationCloseButton" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal confirmation -->
+    <div id="idModalConfirmation" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Confirmation</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="idModalConfirmationText"></p>
+                </div>
+                <div class="modal-footer">
+                    <button id="idModalConfirmationYesButton" type="button" data-dismiss="modal" class="btn btn-primary">Yes</button>
+                    <button id="idModalConfirmationNoButton" type="button" data-dismiss="modal" class="btn">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sounds -->
+    <audio id="idCorrectAnswerSound" src="" />
+    <audio id="idWrongAnswerSound" src="" />
+    <audio id="idPartiallyCorrectAnswerSound" src="" />
+    <audio loop muted autoplay id="idBackgroundSound" src="" />
+
+    <script>
+        var header = $('#idTopBar');
+        // Get the offset position of the top bar
+        var sticky = header.offset();
+
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function PageOnScroll() {
+            if (window.pageYOffset > sticky.top) {
+                header.addClass("sticky");
+            }
+            else {
+                header.removeClass("sticky");
+            }
+        }
+    </script>
+</body>
+</html>
