@@ -134,9 +134,9 @@
       <layout>
         <Name>default</Name>
         <BKGround>
-          <FileName></FileName>
+          <FileName>J:\2025-2026\Prove Di Ingresso Corrette\Hamlet\media\New hamlet (1).jpg</FileName>
           <BKColor>16777215</BKColor>
-          <FKColor>0</FKColor>
+          <FKColor>4210688</FKColor>
           <HMarginLeft>0</HMarginLeft>
           <HMarginRight>0</HMarginRight>
           <VMarginTop>0</VMarginTop>
@@ -605,58 +605,58 @@
       </layout>
       <quizparams>
         <QuizFileName>Hamlet Prince of Denmark</QuizFileName>
-        <QuizDir>J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension</QuizDir>
+        <QuizDir>J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet</QuizDir>
         <MediaDir>media</MediaDir>
         <QuizNamesList>
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\images\background.jpg" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\images\blank.png" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\images\close.png" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\images\correct.png" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\images\glasses.gif" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\images\hint.png" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\images\ko.png" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\images\loading.gif" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\images\logo.png" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\images\music.gif" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\images\next.png" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\images\ok.png" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\images\prev.png" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\images\smile.png" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\images\square.png" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\images\video.gif" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\images\wrong.png" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\cookie.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\definitions.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\engine.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\login.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\matching.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\navigation.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\results.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\security.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\storage.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\time.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\utility.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\valuation.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\view.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\error.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\lightbox.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\recovery.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\bootoast.min.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\styles\main.css" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\styles\lightbox.css" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\styles\bootoast.min.css" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\styles\font-awesome.min.css" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\fonts\fontawesome-webfont.ttf" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\pages\page.html" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\page.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\index.html" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\pages\results.html" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\pages\final.html" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\page_index.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\page_results.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\scripts\page_final.js" />
-          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Hamlet Reading Comprehension\styles\layout.css" />
-          <Item Value="" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\images\background.jpg" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\images\blank.png" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\images\close.png" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\images\correct.png" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\images\glasses.gif" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\images\hint.png" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\images\ko.png" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\images\loading.gif" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\images\logo.png" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\images\music.gif" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\images\next.png" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\images\ok.png" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\images\prev.png" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\images\smile.png" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\images\square.png" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\images\video.gif" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\images\wrong.png" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\cookie.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\definitions.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\engine.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\login.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\matching.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\navigation.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\results.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\security.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\storage.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\time.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\utility.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\valuation.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\view.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\error.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\lightbox.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\recovery.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\bootoast.min.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\styles\main.css" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\styles\lightbox.css" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\styles\bootoast.min.css" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\styles\font-awesome.min.css" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\fonts\fontawesome-webfont.ttf" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\pages\page.html" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\page.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\index.html" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\pages\results.html" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\pages\final.html" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\page_index.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\page_results.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\scripts\page_final.js" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\styles\layout.css" />
+          <Item Value="J:\2025-2026\Prove Di Ingresso Corrette\Nuova reading hamlet\media\New hamlet (1).jpg" />
           <Item Value="" />
           <Item Value="" />
           <Item Value="" />
@@ -675,7 +675,7 @@
         <ShortcutFileName>index.html</ShortcutFileName>
         <DefCharset>utf-8</DefCharset>
         <UseDefCharset>False</UseDefCharset>
-        <AutoPassword>2NK88DC8x#IpQ8z4</AutoPassword>
+        <AutoPassword>AA4eBxo+ej3o8dKc</AutoPassword>
         <HasSeparator>False</HasSeparator>
         <IsAnswersOnSameLine>False</IsAnswersOnSameLine>
         <UsePHP>False</UsePHP>
@@ -684,11 +684,11 @@
       </quizparams>
     </head>
     <body>
-      <question type="2" category="Standard" include="True" weight="1" timetoanswer="0" textFormat="1" sortAns="True" putSeparator="True">
-        <textAbove>&lt;B&gt;&lt;SPAN style="font-size:12;"&gt;Hamlet&lt;/B&gt;, &lt;I&gt;Prince of Denmark, is arguably the most famous tragedy in the English language. It is set in the somber royal court of Elsinore, where the ghost of the recently deceased King Hamlet appears to his son, the protagonist. The Ghost reveals that he was brutally murdered in his sleep by his own brother, Claudius, who then quickly seized the throne and married the late king's wife, Queen Gertrude. This act is the core catalyst for the play's action, charging Hamlet with the duty of revenge.
+      <question type="2" category="Standard" include="True" weight="10" timetoanswer="0" textFormat="1" sortAns="True" putSeparator="True">
+        <textAbove>&lt;SPAN style="font-family:Baskerville Old Face;"&gt;&lt;SPAN style="font-size:42;"&gt;&lt;B&gt;Hamlet&lt;/B&gt;, &lt;I&gt;Prince of Denmark, is arguably the most famous tragedy in the English language. It is set in the somber royal court of Elsinore, where the ghost of the recently deceased King Hamlet appears to his son, the protagonist. The Ghost reveals that he was brutally murdered in his sleep by his own brother, Claudius, who then quickly seized the throne and married the late king's wife, Queen Gertrude. This act is the core catalyst for the play's action, charging Hamlet with the duty of revenge.
 Faced with this monumental, supernatural command, Hamlet struggles with profound existential and moral dilemmas. His famous soliloquy, "To be, or not to be, that is the question," encapsulates his contemplation of suicide as a release from the suffering ("the slings and arrows of outrageous fortune") and his fear of the unknown that lies beyond death. To buy time and ascertain Claudius's guilt without revealing his hand, Hamlet adopts an "antic disposition" (feigned madness). This behavior isolates him, particularly from Ophelia, the woman he loves, who becomes deeply distressed by his erratic cruelty.
 Hamlet orchestrates a dramatic performance, "The Mousetrap" (a play-within-a-play), which mimics the precise manner of the old king's murder. Claudius's immediate, guilt-ridden exit from the audience confirms his culpability for Hamlet. This confirmation leads to a disastrous confrontation between Hamlet and his mother, Gertrude, during which Hamlet accidentally kills the listening courtier, Polonius, mistaking him for Claudius behind the tapestry.
-The final act is a cascade of tragic consequences: Ophelia, driven mad by grief and loss, drowns. Her brother, Laertes, returns seeking revenge for both his father's and sister's deaths. Claudius, ever the schemer, plots with Laertes to ensure Hamlet's demise in a duel. Laertes uses a poisoned rapier, and Claudius prepares a poisoned drink. In the chaotic final scene, Gertrude mistakenly drinks the poison, Laertes wounds Hamlet with the poisoned blade, Hamlet successfully wounds Laertes, and then, using the same poisoned sword, finally kills Claudius. As he lies dying, Hamlet passes the mantle of leadership to Fortinbras, the Prince of Norway, who arrives to survey the carnage and bring order to the corrupted state of Denmark. The play is a powerful examination of the paralyzing nature of thought in the face of action, the decay of political and familial bonds, and the pervasive nature of death.&lt;/I&gt;&lt;/SPAN&gt;</textAbove>
+The final act is a cascade of tragic consequences: Ophelia, driven mad by grief and loss, drowns. Her brother, Laertes, returns seeking revenge for both his father's and sister's deaths. Claudius, ever the schemer, plots with Laertes to ensure Hamlet's demise in a duel. Laertes uses a poisoned rapier, and Claudius prepares a poisoned drink. In the chaotic final scene, Gertrude mistakenly drinks the poison, Laertes wounds Hamlet with the poisoned blade, Hamlet successfully wounds Laertes, and then, using the same poisoned sword, finally kills Claudius. As he lies dying, Hamlet passes the mantle of leadership to Fortinbras, the Prince of Norway, who arrives to survey the carnage and bring order to the corrupted state of Denmark. The play is a powerful examination of the paralyzing nature of thought in the face of action, the decay of political and familial bonds, and the pervasive nature of death.&lt;/I&gt;&lt;/SPAN&gt;&lt;/SPAN&gt;</textAbove>
         <text>&lt;B&gt;Make your choice.&lt;/B&gt;</text>
         <score correct="1" wrong="0" blank="0" />
         <answers>
@@ -821,6 +821,51 @@ The final act is a cascade of tragic consequences: Ophelia, driven mad by grief 
       </question>
       <question type="3" category="Standard" include="True" weight="20" timetoanswer="0" textFormat="1" sortAns="False" putSeparator="True">
         <text>&lt;B&gt;Discuss the symbolic role of Fortinbras in the context of the play's ending. What does his inheritance of the kingdom suggest about the themes of order and corruption explored throughout the tragedy? &lt;/B&gt;&lt;I&gt;Your answer should mention who Fortinbras is, why he arrives, and what the transfer of leadership signifies.&lt;/I&gt; (100/120 words)</text>
+        <score correct="1" wrong="0" blank="0" />
+        <answers></answers>
+      </question>
+      <question type="3" category="Standard" include="True" weight="2" timetoanswer="0" textFormat="1" sortAns="False" putSeparator="True">
+        <textAbove>&lt;B&gt;Turn the sentence into active form.&lt;/B&gt;</textAbove>
+        <text>The Ghost reveals that he was brutally murdered in his sleep by his own brother</text>
+        <score correct="1" wrong="0" blank="0" />
+        <answers></answers>
+      </question>
+      <question type="3" category="Standard" include="True" weight="2" timetoanswer="0" textFormat="1" sortAns="False" putSeparator="True">
+        <textAbove>&lt;B&gt;Turn the sentence into passive form.&lt;/B&gt;</textAbove>
+        <text>His famous soliloquy, "To be, or not to be, that is the question," encapsulates his contemplation of suicide as a release from the suffering </text>
+        <score correct="1" wrong="0" blank="0" />
+        <answers></answers>
+      </question>
+      <question type="3" category="Standard" include="True" weight="2" timetoanswer="0" textFormat="1" sortAns="False" putSeparator="True">
+        <textAbove>&lt;B&gt;Turn the sentence into passive form.&lt;/B&gt;</textAbove>
+        <text>To buy time and ascertain Claudius's guilt without revealing his hand, Hamlet adopts an "antic disposition" </text>
+        <score correct="1" wrong="0" blank="0" />
+        <answers></answers>
+      </question>
+      <question type="3" category="Standard" include="True" weight="1" timetoanswer="0" textFormat="1" sortAns="False" putSeparator="True">
+        <text>What is the tense and aspect of the verb phrase "has been set" if you were to change the verb in the first paragraph's second sentence to show a continuing state up to the present: "It is set in the somber royal court of Elsinore..."?</text>
+        <score correct="1" wrong="0" blank="0" />
+        <answers></answers>
+      </question>
+      <question type="1" category="Standard" include="True" weight="1" timetoanswer="0" textFormat="1" sortAns="False" putSeparator="True">
+        <text>In the phrase, "&lt;B&gt;listening &lt;/B&gt;courtier, Polonius," what type of verbal is the bolded word?</text>
+        <score correct="1" wrong="0" blank="0" />
+        <answers type="1">
+          <singleAns>True</singleAns>
+          <choice correct="False" TextFormat="1" pointsIn="1" pointsOut="0">Infinitive</choice>
+          <choice correct="False" TextFormat="1" pointsIn="1" pointsOut="0">Gerund</choice>
+          <choice correct="True" TextFormat="1" pointsIn="1" pointsOut="0">Present Participle</choice>
+          <choice correct="False" TextFormat="1" pointsIn="1" pointsOut="0">Past Participle</choice>
+        </answers>
+      </question>
+      <question type="3" category="Standard" include="True" weight="1" timetoanswer="0" textFormat="1" sortAns="False" putSeparator="True">
+        <text>In the sentence, "This behavior isolates him, particularly from Ophelia, the woman he loves, who becomes deeply distressed by his erratic cruelty," which word is the antecedent of the relative pronoun "who"?</text>
+        <score correct="1" wrong="0" blank="0" />
+        <answers></answers>
+      </question>
+      <question type="3" category="Standard" include="True" weight="2" timetoanswer="0" textFormat="1" sortAns="False" putSeparator="True">
+        <textAbove>Turn the sentence into past conditional.</textAbove>
+        <text>Laertes uses a poisoned rapier, and Claudius prepares a poisoned drink.</text>
         <score correct="1" wrong="0" blank="0" />
         <answers></answers>
       </question>

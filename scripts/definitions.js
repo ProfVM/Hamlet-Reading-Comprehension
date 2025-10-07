@@ -43,7 +43,7 @@ const QMAKE_SEND_WEBAPP = 4;
 const QMAKE_SEND_NODEJS = 5;
 const QMAKE_SEND_NODEJS_LOCAL = 6;  
 
-const QUIZ_KEYWORD = "2NK88DC8x#IpQ8z4";
+const QUIZ_KEYWORD = "FO$Rd@69f9zyurt2";
 
 const USER_LOGIN_ANONYMOUS = "Anonymous";
 const USER_EMAIL_ANONYMOUS = "anonymous@anonymous.nowhere";
@@ -59,10 +59,10 @@ const options =
 	title: "Hamlet Reading Comprehension",
 	description: "",
 	id: 0,
-	numOfQuestions: 13,
-	notValuatedQuestionsArray: [1,1,1,1,1,1,1,1,1,1,1,0,0],
-	noChoicePointsArray: [0,0,0,0,0,0,0,0,0,0,0,0,0],
-	weightsArray: [1,1,1,1,1,1,1,1,1,1,1,20,20],
+	numOfQuestions: 20,
+	notValuatedQuestionsArray: [10,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,0,0],
+	noChoicePointsArray: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	weightsArray: [10,1,1,1,1,1,1,1,1,1,1,20,20,2,2,2,1,1,1,2],
 	maxtime: 3300, 
 	maxmark: 10,
 	minmark: 0,
